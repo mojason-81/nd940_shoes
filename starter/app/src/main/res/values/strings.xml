@@ -10,4 +10,10 @@
     <string name="welcome_intro">Welcome to some strange shoe app!</string>
     <string name="welcome_directions">To get started, please read the instructions by clicking below.</string>
     <string name="to_instructions">Take me to them instructions!</string>
+    <string name="see_shoes_button">Check out them shoes!</string>
+    <string name="login_fragment_label">Login</string>
+    <string name="welcome_fragment_label">Welcome</string>
+    <string name="instructions_fragment_label">Instructions</string>
+    <string name="shoe_list_label">Shoes</string>
+    <string name="show_details_label">Shoe Details</string>
 </resources>
