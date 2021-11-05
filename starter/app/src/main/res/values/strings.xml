@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="password_hint">Enter Your Password</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="button_login_existing">Login With Existing Account</string>
+    <string name="button_create_new_account">Create A New Account</string>
+    <string name="login_message">Login with your account or create a new one</string>
+    <string name="welcome_intro">Welcome to some strange shoe app!</string>
+    <string name="welcome_directions">To get started, please read the instructions by clicking below.</string>
+    <string name="to_instructions">Take me to them instructions!</string>
 </resources>
