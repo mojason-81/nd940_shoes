@@ -27,7 +27,7 @@ class ShoeDetailFragment : Fragment(){
             inflater, R.layout.fragment_shoe_detail, container, false
         )
 
-        viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
 
         binding.shoeDetailCancelBtn.setOnClickListener { view: View ->
             goToShoeList(view)

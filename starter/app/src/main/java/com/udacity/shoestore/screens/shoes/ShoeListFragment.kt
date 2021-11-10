@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.udacity.shoestore.R
@@ -27,10 +28,8 @@ class ShoeListFragment : Fragment() {
         binding.addShoeFab.setOnClickListener { view: View->
             view.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
-        viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
-        if (viewModel.shoeList.value?.isNotEmpty() == true) {
-            Timber.log(1, viewModel.shoeList.value?.first()?.name)
-        }
+        viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
+
         return binding.root
     }
 }
