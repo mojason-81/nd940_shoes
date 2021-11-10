@@ -26,4 +26,5 @@
     <string name="shoe_detail_name_hint">Enter Shoe Name</string>
     <string name="shoe_detail_company_hint">Enter Shoe Company</string>
     <string name="shoe_detail_size_hint">Enter Shoe Size</string>
+    <string name="shoe_list_item_size_format">%.1f</string>
 </resources>

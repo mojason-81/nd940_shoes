@@ -34,10 +34,6 @@ class ShoeDetailFragment : Fragment(){
         }
 
         binding.shoeDetailSaveBtn.setOnClickListener { view: View ->
-            Toast.makeText(this.context, "TODO: Save Shoe Detail", Toast.LENGTH_SHORT).show()
-        }
-
-        binding.shoeDetailSaveBtn.setOnClickListener { view: View ->
             val newShoe = Shoe(
                 name = binding.editTextShoeName.text.toString(),
                 company = binding.editTextShoeCompany.text.toString(),
