@@ -39,14 +39,10 @@ class ShoeDetailFragment : Fragment(){
 
         binding.shoeDetailSaveBtn.setOnClickListener { view: View ->
             val newShoe = Shoe(
-                // FIXME: This is throwing:
-                //        java.lang.NullPointerException: Attempt to invoke virtual method
-                //        'android.text.Editable android.widget.EditText.getText()'
-                //        on a null object reference
-                name = view.editTextShoeName.text.toString(),
-                company = view.editTextShoeCompany.text.toString(),
-                size = view.editTextShoeSize.text.toString().toDouble(),
-                description = view.editTextShoeDescription.text.toString()
+                name = binding.editTextShoeName.text.toString(),
+                company = binding.editTextShoeCompany.text.toString(),
+                size = binding.editTextShoeSize.text.toString().toDouble(),
+                description = binding.editTextShoeDescription.text.toString()
             )
             viewModel.addShoe(newShoe)
             goToShoeList(view)
