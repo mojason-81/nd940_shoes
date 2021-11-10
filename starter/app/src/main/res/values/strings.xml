@@ -16,4 +16,14 @@
     <string name="instructions_fragment_label">Instructions</string>
     <string name="shoe_list_label">Shoes</string>
     <string name="show_details_label">Shoe Details</string>
+    <string name="shoe_name">Name</string>
+    <string name="shoe_company">Company</string>
+    <string name="shoe_size">Size</string>
+    <string name="shoe_description">Description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="shoe_detail_desciription_hint">Enter Description</string>
+    <string name="shoe_detail_name_hint">Enter Shoe Name</string>
+    <string name="shoe_detail_company_hint">Enter Shoe Company</string>
+    <string name="shoe_detail_size_hint">Enter Shoe Size</string>
 </resources>
