@@ -36,13 +36,6 @@ class ShoeListFragment : Fragment() {
 
         val shoes: List<Shoe>? = viewModel.shoeList.value
 
-        val newBtn = Button(this.context)
-        newBtn.text = "Hello Button"
-//        binding.shoeListScrollViewLinearLayout.addView(
-//            newBtn
-//        )
-        binding.shoeListRelativeLayout.addView(newBtn)
-
         if (shoes?.isNotEmpty() == true) {
             for (shoe in shoes) {
                 Timber.w(shoe.name)
@@ -52,34 +45,9 @@ class ShoeListFragment : Fragment() {
                 val shoeListItem = FragmentShoeListItemBinding.inflate(LayoutInflater.from(requireContext()))
                 shoeListItem.shoe = shoe
                 binding.shoeListScrollViewLinearLayout.addView(shoeListItem.root)
-//                val newShoeListItem: LinearLayout = LinearLayout(this.context)
-//                binding.shoeListScrollViewLinearLayout.addView(
-//                    newShoeListItem,
-//                    LinearLayout.LayoutParams.MATCH_PARENT,
-//                    LinearLayout.LayoutParams.WRAP_CONTENT,
-//                )
-//                newShoeListItem.addView(
-//                    shoeNameTextView(shoe),
-//                    LinearLayout.LayoutParams.MATCH_PARENT,
-//                    LinearLayout.LayoutParams.WRAP_CONTENT,
-//                )
             }
         }
 
         return binding.root
-    }
-
-    private fun emptyShoeListItem(): LinearLayout {
-        val shoeListItem: LinearLayout = LinearLayout(this.context)
-//        shoeListItem.minimumHeight = LinearLayout.LayoutParams.MATCH_PARENT
-//        shoeListItem.minimumWidth = LinearLayout.LayoutParams.MATCH_PARENT
-//        shoeListItem.layoutMode = LinearLayout.LAYOUT_DIRECTION_LTR
-        return shoeListItem
-    }
-
-    private fun shoeNameTextView(shoe: Shoe): TextView {
-        val shoeTV: TextView = TextView(this.context)
-        shoeTV.text = shoe.name
-        return shoeTV
     }
 }
