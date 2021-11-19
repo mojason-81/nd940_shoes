@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.android.navigation.InstructionFragment">
 
+    <!-- Using a ConstraintLayout here for ease of use when aligning and positioning child elements -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/instructionConstraint"
         android:layout_width="match_parent"

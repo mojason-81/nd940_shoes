@@ -8,6 +8,7 @@
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
+    <!-- Using a ConstraintLayout here for ease of use when aligning and positioning child elements -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoeListItemConstraint"
         android:layout_width="match_parent"

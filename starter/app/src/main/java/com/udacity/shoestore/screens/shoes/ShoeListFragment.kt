@@ -28,6 +28,7 @@ class ShoeListFragment : Fragment() {
             view.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailFragment())
         }
         viewModel = ViewModelProvider(requireActivity()).get(ShoeListViewModel::class.java)
+        viewModel.resetNewShoeWasAdded()
 
         viewModel.shoeList.observe(viewLifecycleOwner, Observer { newShoeList ->
             if (newShoeList?.isNotEmpty() == true) {

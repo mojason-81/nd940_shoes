@@ -10,11 +10,23 @@ class ShoeListViewModel : ViewModel() {
     val shoeList: LiveData<List<Shoe>>
       get() = _shoeList
 
-    fun addShoe(newShoe: Shoe) {
-        _shoeList.value = _shoeList.value?.plus(listOf(newShoe))
+    private val _newShoeWasAdded = MutableLiveData<Boolean>()
+    val newShoeWasAdded: LiveData<Boolean>
+      get() = _newShoeWasAdded
+
+    fun addShoe(newShoe: Shoe?) {
+        if (newShoe != null) {
+            _shoeList.value = _shoeList.value?.plus(listOf(newShoe))
+            _newShoeWasAdded.value = true
+        }
+    }
+
+    fun resetNewShoeWasAdded() {
+        _newShoeWasAdded.value = false
     }
 
     init {
         _shoeList.value = listOf()
+        _newShoeWasAdded.value = false
     }
 }
