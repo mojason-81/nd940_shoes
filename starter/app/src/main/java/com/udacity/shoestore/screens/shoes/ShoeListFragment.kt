@@ -1,9 +1,7 @@
 package com.udacity.shoestore.screens.shoes
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -16,12 +14,13 @@ import com.udacity.shoestore.databinding.FragmentShoeListItemBinding
 
 class ShoeListFragment : Fragment() {
     private lateinit var viewModel: ShoeListViewModel
+    private lateinit var binding: FragmentShoeListBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding: FragmentShoeListBinding = DataBindingUtil.inflate(
+        binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_shoe_list, container, false
         )
         binding.addShoeFab.setOnClickListener { view: View->
@@ -40,6 +39,24 @@ class ShoeListFragment : Fragment() {
             }
         })
 
+        setHasOptionsMenu(true)
+
         return binding.root
+    }
+
+    private fun onLogout() {
+        binding.root.findNavController().navigate(R.id.loginFragment)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.main_menu, menu)
+        return super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.logoutMenuButton -> onLogout()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
